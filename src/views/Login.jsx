@@ -11,19 +11,13 @@ import {
 } from "../services/FireBase";
 
 export const Login = () => {
-  const [error, setError] = useState(null),
-    { user } = useContext(Auth),
+  const { user } = useContext(Auth),
     { handleSubmit, register, errors } = useForm();
 
   const onSubmit = async (data) => {
       const { email, password } = data;
 
-      await app
-        .auth()
-        .signInWithEmailAndPassword(email, password)
-        .catch((error) => {
-          setError(error.message);
-        });
+      await app.auth().signInWithEmailAndPassword(email, password);
     },
     socialLogin = async (provider) => {
       await app.auth().signInWithPopup(provider);
