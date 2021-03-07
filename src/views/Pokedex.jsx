@@ -11,10 +11,10 @@ export const Pokedex = () => {
     const
         [pokemons, setPokemons] = useState([]),
         [pokemonsFilters, setPokemonsFilters] = useState([]),
-        [message, setMessage] = useState(null),
+       /*  [message, setMessage] = useState(null), */
         [page, setPage] = useState(0),
         [totalPokemon, setTotalPokemon] = useState(0),
-        [pokemonsPerPage, setPokemonsPerPage] = useState(5),
+        [pokemonsPerPage] = useState(5),
         [name, setName] = useState(null),
         { user } = useContext(Auth)
 
