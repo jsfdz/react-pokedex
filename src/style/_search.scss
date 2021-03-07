@@ -1,0 +1,39 @@
+.search {
+  margin: 20px 0;
+  div {
+    margin: 10px 0 2px;
+    label {
+      color: $color-txt-primary;
+    }
+    form {
+      div {
+        display: flex;
+        align-items: center;
+        @include inputs;
+        padding: 8px;
+        i {
+          color: $color-txt-primary;
+          margin-right: 5px;
+        }
+        input {
+          color: #464646;
+          width: 100%;
+          @include inputs;
+        }
+      }
+    }
+  }
+}
+
+.filters-form {
+  div {
+    display: flex;
+    justify-content: space-between;
+    select {
+      @include inputs;
+      width: 45%;
+      color: #727272;
+      padding: 10px;
+    }
+  }
+}

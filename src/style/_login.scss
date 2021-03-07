@@ -1,0 +1,152 @@
+/* start Welcome */
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./20994.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation {
+  background: rgba(10, 10, 10, 0.349);
+  padding: 15px;
+  border-radius: 6px;
+  > p {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+  }
+  div {
+    p {
+      text-align: center;
+      margin-top: 20px;
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+        background: #e9820c;
+        padding: 5px 10px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+/* End Welcome */
+
+/* start login */
+.login-form {
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/564x/60/d8/63/60d863cba94d2292eb4a697eea61aecc.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 768px) {
+    background-image: url("https://images3.alphacoders.com/417/thumb-1920-41715.jpg");
+  }
+  form {
+    width: 80%;
+    transform: translateY(-30%);
+    max-width: 400px;
+    background: rgb(255, 255, 255);
+    padding: 0 15px;
+    border-radius: 8px;
+    a {
+      @include back;
+      i {
+        margin-top: 10px;
+      }
+    }
+    h4 {
+      font-size: 2rem;
+      margin: 10px 0;
+      text-align: center;
+    }
+    label {
+      padding: 9px 0;
+      font-weight: 500;
+      color: $color-txt-secondary;
+      font-size: 0.9rem;
+    }
+    div {
+      input {
+        width: 100%;
+        border: none;
+        background-color: $bg-input;
+        padding: 8px 5px;
+        border-radius: 8px;
+        outline: none;
+      }
+    }
+  }
+}
+
+.btn-submit-social {
+  div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    button {
+      padding: 0.5rem 1.4rem;
+      background: $bg-primary;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      margin: 10px auto;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover {
+        background-color: darken(#fad701, 5);
+        transform: translateY(-2px);
+      }
+      &:focus {
+        transform: translateY(0px);
+      }
+    }
+    p {
+      margin-top: 0.6rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      color: $color-txt-secondary;
+    }
+    i {
+      margin: 10px;
+      font-size: 25px;
+      cursor: pointer;
+      color: $color-txt-secondary;
+      transition: all 0.2s;
+      &:hover {
+        color: darken($color-txt-secondary, 40);
+      }
+    }
+  }
+}
+
+.test {
+  background-color: lighten($bg-primary, 25);
+  box-shadow: inset 0 2px 4px 0 rgba(10, 10, 10, 0.06);
+  border-radius: 8px;
+  padding: 8px 0;
+  margin-bottom: 0.7rem;
+  p {
+    font-size: 0.9rem;
+    color: #000000;
+    text-align: center;
+  }
+  p + p {
+    font-style: oblique;
+  }
+}
+
+.error-login {
+  @include error;
+  margin-bottom: 0.7rem;
+}
+/* End login */

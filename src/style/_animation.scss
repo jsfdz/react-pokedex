@@ -1,0 +1,66 @@
+.table-progress {
+  > div {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background: #e5e5e5;
+    border-radius: 4px;
+    div {
+      position: relative;
+      float: left;
+      height: 100%;
+    }
+  }
+}
+
+.loading {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .pokeball {
+  height: 48px;
+  width: 48px;
+  border: 4px solid #000;
+  border-radius: 50%;
+  background-image: linear-gradient(#f51939 24px, white 24px);
+  position: relative;
+  animation: load 2s infinite;
+}
+
+@keyframes load {
+  50% {
+    transform: scale(0.7);
+  }
+}
+.loading .pokeball:before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 43px;
+  background-color: #000000;
+  top: 21px;
+}
+
+.loading .pokeball:after {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  background-image: radial-gradient(
+    #fff 2px,
+    #fff 2px,
+    #000 2px,
+    #000 4px,
+    #fff 5px,
+    #fff 6px,
+    #000 7px
+  );
+  border-radius: 50%;
+  top: 13px;
+  left: 10px;
+}

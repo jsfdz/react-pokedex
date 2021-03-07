@@ -1,0 +1,32 @@
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: #ff4343;
+    font-size: 3rem;
+  }
+  div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 5rem;
+      font-weight: 800;
+      color: #aaa;
+    }
+  }
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  p {
+    a {
+      text-decoration: none;
+      color: #292929;
+    }
+  }
+}

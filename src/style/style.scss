@@ -1,0 +1,34 @@
+@import "variables";
+@import "mixin";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font-txt-primary;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+@import "login";
+@import "pokedex";
+@import "search";
+@import "pokeList";
+@import "pagination";
+@import "animation";
+@import "grid";
+@import "detaills";
+@import "not-found";

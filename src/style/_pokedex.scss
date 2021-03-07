@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  a {
+    i {
+      @include back;
+    }
+  }
+  h1 {
+    color: $color-txt-secondary;
+  }
+  div {
+    i {
+      font-size: 30px;
+      color: $color-txt-secondary;
+      cursor: pointer;
+    }
+  }
+}
+
+.user {
+  color: $color-txt-primary;
+  margin: 10px auto;
+  text-align: center;
+}
