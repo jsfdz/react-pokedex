@@ -1,13 +1,549 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  overflow-x: hidden;
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input,
+input[type='text'],
+textarea,
+select {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 5vw;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.welcome-bg {
+  width: 159px;
+  margin: 0 auto;
+}
+
+.welcome-bg img {
+  width: 100%;
+}
+
+.home h1 {
+  text-align: center;
+}
+
+.get-start {
+  margin: 10px auto;
+}
+
+.go-pokedex,
+.go-login {
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.go-pokedex a,
+.go-login a {
+  color: #fff;
+  text-decoration: none;
+  background: #ff2f2f;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.go-login a {
+  background: #2f66ff;
+}
+
+.test {
+  background: #ffeb8a;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.login-form p {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.test p {
+  margin: 10px;
+  font-size: unset;
+}
+
+.login-form .login-item {
+  margin-bottom: 25px;
+}
+
+.login-form .login-item input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid transparent;
+  background-color: #e9e9e9;
+  color: #464646;
+  border-radius: 5px;
+}
+
+.login-form button {
+  padding: 10px 15px;
+  background: #5fe68f;
+  border-radius: 5px;
+  border: transparent;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+}
+
+.social-login > *:not(:last-child) {
+  margin-right: 15px;
+}
+
+button.google {
+  background: #ffc3c3;
+}
+
+button.facebook {
+  background: #7797f3;
+}
+
+button.github {
+  background: #333333;
+  color: #fff;
+}
+
+p.alert {
+  background: #ff01011f;
+  color: #bf3939;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}
+
+.pokedex .user span {
+  margin-right: 15px;
+}
+
+.pokedex .user button {
+  padding: 5px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #7d47ff;
+}
+
+.search-form p {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid transparent;
+  background-color: #e9e9e9;
+  color: #464646;
+  border-radius: 5px;
+  padding-left: 2.3rem;
+}
+
+.search-input {
+  position: relative;
+}
+
+.icon-search {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.3rem;
+  height: 2.3rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.icon-search svg {
+  font-size: 0.9rem;
+}
+
+.filters-form p {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters select {
+  width: 45%;
+  padding: 5px;
+  border: 1px solid transparent;
+  background-color: #e9e9e9;
+  color: #464646;
+  border-radius: 5px;
+}
+
+.filters select {
+  text-transform: capitalize;
+}
+
+.pokeList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokeList a {
+  text-decoration: none;
+  color: unset;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.pokeCard {
+  border-radius: 15px;
+}
+
+.inner {
+  padding: 15px;
+  display: flex;
+}
+
+.inner > * {
+  width: 50%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content .number {
+  background: #0000003b;
+  padding: 2px 5px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.content h3.name {
+  margin-bottom: 12px;
+}
+
+.content .content-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: #00000030;
+  border-radius: 50%;
+}
+
+.content .content-icon > *:not(:last-child) {
+  margin-right: 5px;
+}
+
+.content .item {
+  font-size: 13px;
+}
+
+.inner .images {
+  position: relative;
+}
+
+.inner .bg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.pokeCard .bg-container {
+  width: 125px;
+  height: 125px;
+}
+
+.pokeCard .bg-container img {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.inner .img-container {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner .poke-image {
+  width: 160px;
+  height: 160px;
+  transform: translateY(-10px);
+}
+
+.inner .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.bg-loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poke-detail {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.hero {
+  min-height: 60vh;
+  background: #ddd;
+  padding-bottom: 20px;
+}
+
+.hero .container {
+  padding-top: 0px;
+}
+
+.hero .title-name {
+  text-align: center;
+}
+
+.hero .pokemon-id {
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
+
+.hero .pokemon-id span {
+  background: #0000003b;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.poke-detail .images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0;
+}
+
+.poke-detail .bg-container {
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+}
+
+.poke-detail .bg-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.poke-detail .img-container {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poke-detail .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.body-container {
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+  transform: translateY(-20px);
+}
+
+.body-container h4 {
+  margin-top: 15px;
+}
+
+table.table-info,
+table.table-stats,
+table.table-encounters {
+  width: 100%;
+  margin-top: 10px;
+}
+
+table.table-encounters th {
+  text-align: left;
+}
+
+.body-container td.table-title {
+  text-transform: capitalize;
+}
+
+.body-container td.table-description {
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.body-container td.table-progress {
+  width: 50%;
+}
+
+.body-container .progress {
+  padding: 0;
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  background: #e5e5e5;
+  border-radius: 6px;
+}
+
+.body-container .progress .bar {
+  position: relative;
+  float: left;
+  height: 100%;
+}
+
+.loading {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .pokeball {
+  height: 48px;
+  width: 48px;
+  border: 4px solid #000;
+  border-radius: 50%;
+  background-image: linear-gradient(#f51939 24px, white 24px);
+  position: relative;
+  animation: load 2s infinite;
+}
+
+@keyframes load {
+  50% {
+    transform: scale(0.7);
+  }
+}
+.loading .pokeball:before {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 43px;
+  background-color: #000000;
+  top: 21px;
+}
+
+.loading .pokeball:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  background-image: radial-gradient(#fff 2px, #fff 2px, #000 2px, #000 4px, #fff 5px, #fff 6px, #000 7px);
+  border-radius: 50%;
+  top: 13px;
+  left: 10px;
+}
+
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found h2 {
+  color: #ff4343;
+  font-size: 3rem;
+}
+
+.error-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-container span {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #aaa;
+}
+
+.not-found h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.pagination .active {
+  background-color: blueviolet;
 }
