@@ -30,6 +30,14 @@
         background: #e9820c;
         padding: 5px 10px;
         border-radius: 8px;
+        transition: all 0.2s;
+        &:hover {
+          background-color: darken(#e9820c, 5);
+          transform: translateY(-2px);
+        }
+        &:focus {
+          transform: translateY(0px);
+        }
       }
     }
   }
