@@ -95,15 +95,17 @@
   }
 }
 
-.skill {
-  @media (min: width 420px) {
-    max-width: 220px;
+.details {
+  @media (min-width: 420px) {
+    max-width: 260px;
   }
+}
+
+.skill {
   tbody {
     tr {
       td {
         width: 35%;
-        margin: auto;
       }
       td + td {
         width: 50%;
@@ -113,17 +115,17 @@
 }
 
 .encounters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
+  h4 {
+    width: 100%;
+  }
   div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 10px;
-    p {
-      padding: 5px 10px;
-      margin: 5px;
-      border-radius: 10px;
-    }
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
   }
 }

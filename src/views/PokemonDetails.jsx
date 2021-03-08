@@ -126,7 +126,7 @@ export const PokemonDetails = () => {
                         )}
                       </p>
 
-                      <table className="col-s-12 col-md-5 skill">
+                      <table className="col-s-12 col-md-5 details">
                         <h4>Details</h4>
                         <tbody>
                           <tr>
@@ -184,32 +184,14 @@ export const PokemonDetails = () => {
                           <>
                             {locations.map((location, index) => {
                               return (
-                                <div>
-                                  Region:
-                                  <p
-                                    key={index + 1}
-                                    style={{
-                                      backgroundColor: `${pokemon.color}`,
-                                    }}
-                                  >
-                                    {location.region}
-                                  </p>
-                                </div>
-                              );
-                            })}
-
-                            {locations.map((location, index) => {
-                              return (
-                                <div>
-                                  Area:
-                                  <p
-                                    key={index + 1}
-                                    style={{
-                                      backgroundColor: `${pokemon.color}`,
-                                    }}
-                                  >
-                                    {location.area.join(" ")}
-                                  </p>
+                                <div
+                                  key={index + 1}
+                                  style={{
+                                    backgroundColor: `${pokemon.color}`,
+                                  }}
+                                >
+                                  <p>Region: {location.region}</p>
+                                  <p>Area: {location.area.join(" ")}</p>
                                 </div>
                               );
                             })}

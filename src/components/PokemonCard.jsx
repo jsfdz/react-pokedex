@@ -17,7 +17,6 @@ export const PokemonCard = ({ url }) => {
         types = poke_types.map((type) => type).join(" / "),
         icon = `../img/icons/${type}.svg`,
         image = `../img/images/${data.id}.svg`;
-
       setPokemon({ id, name, type, color, types, icon, image });
     };
 
