@@ -104,7 +104,7 @@ export const PokemonDetails = () => {
                     style={{ backgroundColor: `${pokemon.color}` }}
                   >
                     <Link to="/pokedex">
-                      <i className="fas fa-chevron-left">Back</i>
+                      <i className="fas fa-chevron-left"></i>
                     </Link>
                     <div className="img-content">
                       <img src="./img/pokebola.svg" alt="" />
@@ -113,8 +113,8 @@ export const PokemonDetails = () => {
                     <div className="name">
                       <p>{pokemon.name}</p>
                       <div>
-                        <img src={pokemon.icon} alt="xd" />#{" "}
-                        {pokemon.id.toString().padStart(3, "0")}
+                        <img src={pokemon.icon} alt="xd" />
+                        <span>#{pokemon.id.toString().padStart(3)}</span>
                       </div>
                     </div>
                   </div>
@@ -128,7 +128,7 @@ export const PokemonDetails = () => {
                         )}
                       </p>
 
-                      <table className="col-s-12 col-md-5">
+                      <table className="col-s-12 col-md-5 skill">
                         <h4>Details</h4>
                         <tbody>
                           <tr>
@@ -150,7 +150,7 @@ export const PokemonDetails = () => {
                         </tbody>
                       </table>
 
-                      <table className="col-s-12 col-md-5">
+                      <table className="col-s-12 col-md-5 skill">
                         <h4>Stats</h4>
                         <tbody>
                           {pokemon?.stats.map((stat) => {
@@ -158,9 +158,6 @@ export const PokemonDetails = () => {
                               <tr key={stat.name}>
                                 <td className="table-title">
                                   {stat.name.replace("-", "\n")}:
-                                </td>
-                                <td className="table-description">
-                                  {stat.stat_base}
                                 </td>
                                 <td className="table-progress">
                                   <div className="progress">
@@ -183,40 +180,45 @@ export const PokemonDetails = () => {
                         </tbody>
                       </table>
 
-                      <table className="col-s-12 col-md-12">
+                      <table className="col-s-12 col-md-12 encounters">
                         <h4>Encounters</h4>
-                        <tbody>
-                          {locations.length !== 0 ? (
-                            <>
-                              <p>
-                                <span>Region: </span>
-                                {locations.map((location, index) => {
-                                  return (
-                                    <span key={index + 1}>
-                                      {'"' + location.region + '." '}
-                                    </span>
-                                  );
-                                })}
-                              </p>
-                              <p>
-                                <span>Area: </span>
-                                {locations.map((location, index) => {
-                                  return (
-                                    <span key={index + 1}>
-                                      {'"' + location.area.join(" ") + '." '}
-                                    </span>
-                                  );
-                                })}
-                              </p>
-                            </>
-                          ) : (
-                            <tr>
-                              <td className="table-description">
-                                There is no information about its location.
-                              </td>
-                            </tr>
-                          )}
-                        </tbody>
+                        {locations.length !== 0 ? (
+                          <>
+                            {locations.map((location, index) => {
+                              return (
+                                <div>
+                                  Region:
+                                  <p
+                                    key={index + 1}
+                                    style={{
+                                      backgroundColor: `${pokemon.color}`,
+                                    }}
+                                  >
+                                    {location.region}
+                                  </p>
+                                </div>
+                              );
+                            })}
+
+                            {locations.map((location, index) => {
+                              return (
+                                <div>
+                                  Area:
+                                  <p
+                                    key={index + 1}
+                                    style={{
+                                      backgroundColor: `${pokemon.color}`,
+                                    }}
+                                  >
+                                    {location.area.join(" ")}
+                                  </p>
+                                </div>
+                              );
+                            })}
+                          </>
+                        ) : (
+                          <p>There is no information about its location.</p>
+                        )}
                       </table>
                     </div>
                   </div>

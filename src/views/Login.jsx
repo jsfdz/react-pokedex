@@ -28,16 +28,23 @@ export const Login = () => {
       {!user ? (
         <div className="login-form">
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
-            <Link to="/">
-              <i className="fas fa-chevron-left">Back</i>
-            </Link>
-            <h4>Login</h4>
+            <div className="btn-log">
+              <div>
+                <Link to="/">
+                  <i className="fas fa-chevron-left"></i>
+                </Link>
+              </div>
+              <h4>Login</h4>
+            </div>
             <div className="test">
               <p>Account demo</p>
               <p>email: test@test.com</p>
               <p>password: 123456</p>
             </div>
-            <label htmlFor="email">Write yout email</label>
+            <div className="labels">
+              <label htmlFor="email">Write yout email</label>
+            </div>
+
             <div className="login-item">
               <input
                 id="email"
@@ -58,7 +65,9 @@ export const Login = () => {
                 <p className="error-login">{errors.email.message}*</p>
               )}
             </div>
-            <label htmlFor="password">Write yout password</label>
+            <div className="labels">
+              <label htmlFor="password">Write yout password</label>
+            </div>
             <div className="login-item">
               <input
                 id="password"

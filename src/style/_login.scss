@@ -51,38 +51,52 @@
   }
   form {
     width: 80%;
-    transform: translateY(-30%);
+    transform: translateY(-20%);
     max-width: 400px;
     background: rgb(255, 255, 255);
     padding: 0 15px;
     border-radius: 8px;
-    a {
-      @include back;
-      i {
-        margin-top: 10px;
-      }
-    }
-    h4 {
-      font-size: 2rem;
-      margin: 10px 0;
-      text-align: center;
-    }
-    label {
-      padding: 9px 0;
-      font-weight: 500;
-      color: $color-txt-secondary;
-      font-size: 0.9rem;
-    }
     div {
       input {
+        margin-top: 5px;
         width: 100%;
         border: none;
         background-color: $bg-input;
-        padding: 8px 5px;
+        padding: 0.55rem 0.7rem;
         border-radius: 8px;
         outline: none;
       }
     }
+  }
+}
+
+.btn-log {
+  position: relative;
+  display: flex;
+  align-items: center;
+  div {
+    position: absolute;
+    a {
+      i {
+        @include back;
+      }
+    }
+  }
+  h4 {
+    width: 100%;
+    font-size: 2rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+.labels {
+  padding-top: 0.8rem;
+  label {
+    padding: 9px 0;
+    font-weight: 500;
+    color: $color-txt-secondary;
+    font-size: 0.9rem;
   }
 }
 

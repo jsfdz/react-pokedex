@@ -1,5 +1,4 @@
 @import "variables";
-@import "mixin";
 
 * {
   padding: 0;
@@ -10,6 +9,11 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
+  font-size: 16px;
+}
+
+input {
+  font-size: 0.9rem;
 }
 
 *,
@@ -20,9 +24,10 @@ html {
 
 .container {
   width: 90%;
+  max-width: 1400px;
   margin: auto;
 }
-
+@import "mixin";
 @import "login";
 @import "pokedex";
 @import "search";

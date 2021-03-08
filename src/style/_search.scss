@@ -34,6 +34,13 @@
       width: 45%;
       color: #727272;
       padding: 10px;
+      text-transform: capitalize;
     }
+  }
+}
+
+.filters {
+  select::first-letter {
+    text-transform: capitalize;
   }
 }

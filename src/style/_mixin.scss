@@ -13,6 +13,8 @@
 }
 
 @mixin back {
-  color: #333333;
-  font-size: 20px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  color: $color-txt-secondary;
+  background-color: lighten($color-txt-primary, 60);
 }
