@@ -39,8 +39,6 @@
   }
 }
 
-.filters {
-  select::first-letter {
-    text-transform: capitalize;
-  }
+select:before {
+  content: "";
 }

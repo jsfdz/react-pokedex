@@ -61,7 +61,6 @@ export const Pokedex = () => {
             />
           </div>
 
-          {/* {message && <p>{message}</p>} */}
           <div className="pokeLis">
             <PokemonList
               pokemons={pokemons}

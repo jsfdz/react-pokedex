@@ -1,6 +1,6 @@
 # Esta app esta hecha con React Js
 
-Puedes visualizarla en [Pokedex-baby](https://github.com/facebook/create-react-app).
+Puedes visualizarla en [Pokedex-baby](https://react-pokedex-jsdenn-h.netlify.app/).
 
 ## Colaboradores
 

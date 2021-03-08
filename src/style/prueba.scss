@@ -1,0 +1,12 @@
+.filters-form {
+  div {
+    display: flex;
+    justify-content: space-between;
+    select {
+      width: 45%;
+      color: #727272;
+      padding: 10px;
+      text-transform: capitalize;
+    }
+  }
+}

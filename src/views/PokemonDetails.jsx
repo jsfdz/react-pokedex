@@ -55,8 +55,6 @@ export const PokemonDetails = () => {
           image,
           stats,
         });
-      } else {
-        // setMessage('lo siento todavia no capturamos mas de 649 pokemon')
       }
     };
 
